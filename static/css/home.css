@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'PixelFontCustom';
+    src: url('/static/font/font.ttf') format('truetype');
+}
+
+body {
+    background: url("/static/images/header.png") no-repeat  fixed;
+    background-size: 100% auto;
+}
+h1 {
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'PixelFontCustom', sans-serif;
+
+}
