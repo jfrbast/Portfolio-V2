@@ -3,13 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="/static/css/common.css">
+    <link rel="stylesheet" href="/static/css/header.css">
     <link rel="stylesheet" href="/static/css/home.css">
 </head>
-<body>
-<h1>
-  BIENVENUE
-</h1>
-</body>
+
+{{template "header" .}}
+    <body>
+
+    <h1>
+        BIENVENUE
+    </h1>
+    </body>
+
+
 </html>
 {{end}}
 
