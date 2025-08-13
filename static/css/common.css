@@ -2,3 +2,9 @@
     font-family: 'PixelFontCustom';
     src: url('/static/font/font.ttf') format('truetype');
 }
+*{
+    cursor: url('/static/images/cursor1.png'),url('/static/images/cursor1.png') , pointer ;
+
+
+
+}

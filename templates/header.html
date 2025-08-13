@@ -1,35 +1,77 @@
 {{define "header"}}
 <header>
-    <button id="spriteBtn">
-        <img id="spriteImg" src="/static/sprites/play_button/green_play1.png" alt="sprite" width="48" height="16"
-             style="object-fit: none; object-position: 0px 0px;">
+    <button id="spriteBtn2">
+        <img id="spriteImg2" src="/static/sprites/About-button/about-button1.png" alt="sprite">
 
     </button>
+    <button id="spriteBtn">
+        <img id="spriteImg" src="/static/sprites/play_button/green_play1.png" alt="sprite" >
+
+    </button>
+    <button id="spriteBtn3">
+    <img id="spriteImg3" src="/static/sprites/Credits_button/credits-button1.png" alt="sprite" >
+
+</button>
+
+
 </header>
 <script>
-    const frames = [
-        "/static/sprites/play_button/green_play1.png",
-        "/static/sprites/play_button/green_play2.png",
-        "/static/sprites/play_button/green_play3.png"
-    ];
-    const frameInterval = 70;
-    const redirectDelay = 200;
-    let currentFrame = 0;
-    let interval;
+    function setupSpriteAnimation(btnId, imgId, frames, redirectUrl) {
+        const frameInterval = 70;
+        const redirectDelay = 200;
+        let currentFrame = 0;
+        let interval;
 
-    document.getElementById("spriteBtn").addEventListener("click", () => {
-        currentFrame = 0;
-        clearInterval(interval);
-        interval = setInterval(() => {
-            document.getElementById("spriteImg").src = frames[currentFrame];
-            currentFrame++;
-            if (currentFrame >= frames.length) {
-                clearInterval(interval);
-                setTimeout(() => {
-                    window.location.href = "/page";
-                }, redirectDelay);
-            }
-        }, frameInterval);
-    });
+        document.getElementById(btnId).addEventListener("click", () => {
+            currentFrame = 0;
+            clearInterval(interval);
+            interval = setInterval(() => {
+                document.getElementById(imgId).src = frames[currentFrame];
+                currentFrame++;
+                if (currentFrame >= frames.length) {
+                    clearInterval(interval);
+                    setTimeout(() => {
+                        window.location.href = redirectUrl;
+                    }, redirectDelay);
+                }
+            }, frameInterval);
+        });
+    }
+
+
+    setupSpriteAnimation(
+        "spriteBtn",
+        "spriteImg",
+        [
+            "/static/sprites/play_button/green_play1.png",
+            "/static/sprites/play_button/green_play2.png",
+            "/static/sprites/play_button/green_play3.png"
+        ],
+        "/page"
+    );
+
+    setupSpriteAnimation(
+        "spriteBtn2",
+        "spriteImg2",
+        [
+            "/static/sprites/About-button/about-button1.png",
+            "/static/sprites/About-button/about-button2.png",
+            "/static/sprites/About-button/about-button3.png"
+
+        ],
+        "/about"
+    );
+    setupSpriteAnimation(
+        "spriteBtn3",
+        "spriteImg3",
+        [
+            "/static/sprites/Credits_button/credits-button1.png",
+            "/static/sprites/Credits_button/credits-button2.png",
+            "/static/sprites/Credits_button/credits-button3.png"
+
+        ],
+        "/credits"
+    );
 </script>
+
 {{end}}

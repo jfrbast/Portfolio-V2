@@ -1,0 +1,81 @@
+
+body {
+    background: url("/static/images/background.png") no-repeat center ;
+    background-size: auto 100%;
+}
+h1 {
+    color: black;
+    font-family: 'PixelFontCustom', sans-serif;
+    margin: 0;
+    margin-top: 4vh;
+
+}
+p{
+    color: black;
+    font-family: 'PixelFontCustom', sans-serif;
+    margin: 0;
+}
+.min-text{
+    font-size: 0.6em;
+    color: black;
+    font-family: 'PixelFontCustom', sans-serif;
+    margin: 0;
+}
+
+
+.bubul-container {
+    position: relative;
+    margin-top: 5vh;
+
+
+}
+
+.bubul {
+    display: block;
+    width: 900px;
+    height: auto;
+    margin: 0;
+    image-rendering: pixelated;
+
+}
+
+.bubul-text {
+    position: absolute;
+    bottom: 70;
+    left: 100;
+    width: 45vw;
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    pointer-events: none;
+}
+
+
+.bubul-container2 {
+    position: relative;
+    margin: 5vh 0 5vh auto;
+    width: fit-content;
+}
+
+.bubul-text2 {
+    position: absolute;
+    bottom: 70px;
+    right: 100px;
+    width: 45vw;
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    pointer-events: none;
+}
+.bubul3text{
+
+    font-size: 0.9em;
+
+}
