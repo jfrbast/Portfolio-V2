@@ -1,7 +1,8 @@
 
 body {
     background: url("/static/images/background.png") no-repeat center ;
-    background-size: auto 100%;
+    background-size: cover;
+    image-rendering: pixelated;
 }
 h1 {
     color: black;
@@ -41,8 +42,9 @@ p{
 
 .bubul-text {
     position: absolute;
-    bottom: 70;
-    left: 100;
+    bottom: 70px;
+    right: 100px;
+    left: 100px;
     width: 45vw;
     height: 100%;
     color: white;
@@ -64,7 +66,7 @@ p{
 .bubul-text2 {
     position: absolute;
     bottom: 70px;
-    right: 100px;
+    left:70px;
     width: 45vw;
     height: 100%;
     color: white;
@@ -77,5 +79,128 @@ p{
 .bubul3text{
 
     font-size: 0.9em;
+
+}
+#sprite-container > img {
+    width: 500px;
+    height: auto;
+    image-rendering: pixelated;
+    margin-top: 4vh;
+    margin-left: 6vw;
+    display: flex;
+}
+#cow-container > img {
+    width: 500px;
+    height: auto;
+    image-rendering: pixelated;
+    margin-top: 5vh;
+    margin-right: 7vw;
+    display: flex;
+}
+
+
+.spritebubul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#image-tree{
+    margin-right: 10vw;
+
+}
+.tree-image{
+    width: 300px;
+    height: auto;
+    image-rendering: pixelated;
+    margin-top: 4vh;
+    margin-left: 6vw;
+}
+
+
+@media (max-width: 1500px) {
+    #sprite-container{
+        display: none;
+    }
+    .tree-image{
+        display: none;
+    }
+    #cow-container > img {
+        display: none;
+    }
+
+
+}
+
+
+@media (min-width: 1178px) {
+
+    .bubul-text{
+        width:60vw;
+    }
+    .bubul-text2{
+        width: 60vw;
+    }
+}
+@media (max-width: 1178px) {
+
+    .bubul-text{
+        width: 70vw;
+    }
+    .bubul-text2{
+        width: 70vw;
+    }
+}
+@media (min-width: 1370px) {
+
+    .bubul-text{
+        width:65vw;
+    }
+    .bubul-text2{
+        width: 50vw;
+    }
+}
+@media (min-width: 1600px) {
+
+    .bubul-text{
+        width:45vw;
+    }
+    .bubul-text2{
+        width: 45vw;
+    }
+}
+@media (min-width: 1800px) {
+
+    .bubul-text{
+        width:40vw;
+    }
+    .bubul-text2{
+        width: 40vw;
+    }
+}
+@media (min-width: 2060px) {
+
+    .bubul-text{
+        width:30vw;
+    }
+    .bubul-text2{
+        width: 30vw;
+    }
+}
+@media (min-width: 2745px) {
+
+    .bubul-text{
+        width:25vw;
+    }
+    .bubul-text2{
+        width: 25vw;
+    }
+}
+
+@media (min-width: 1370px) and (max-width: 1600px) {
+
+    .bubul-text{
+        width:45vw;
+    }
 
 }

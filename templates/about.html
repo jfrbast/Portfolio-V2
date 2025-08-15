@@ -2,13 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>About</title>
     <link rel="stylesheet" href="/static/css/common.css">
     <link rel="stylesheet" href="/static/css/header.css">
     <link rel="stylesheet" href="/static/css/about.css">
 </head>
 {{template "header" .}}
 <body>
+<div class="spritebubul">
+
 <div class="bubul-container">
     <img src="/static/images/bubul.png" alt="About Button" class="bubul">
     <div class="bubul-text">
@@ -20,8 +22,18 @@
         <p>2. The "basic" portfolio</p>
         <p class="min-text">more basic, with a direct list of projects without going through the game. </p>
     </div>
+
+</div> <div id="image-tree">
+    <img src="/static/images/Apple_Tree.png" alt="Tree Image" class="tree-image">
+</div>
 </div>
 
+
+
+
+
+<div class="spritebubul">
+<div id="sprite-container"></div>
 <div class="bubul-container2">
     <img src="/static/images/bubul2.png" alt="About Button" class="bubul">
     <div class="bubul-text2">
@@ -34,7 +46,11 @@
         <p class="min-text">I like to make a lot of projects it make me happy :)   </p>
     </div>
 </div>
+</div>
 
+
+
+<div class="spritebubul">
 <div class="bubul-container">
     <img src="/static/images/bubul.png" alt="About Button" class="bubul">
     <div class="bubul-text">
@@ -46,7 +62,13 @@
         <br>
         <p class="min-text">no worries it's not rocket science.  </p>
     </div>
+
 </div>
+    <div id="cow-container"></div>
+</div>
+
+<script src="/static/js/about.js"></script>
+
 </body>
 </html>
 {{end}}

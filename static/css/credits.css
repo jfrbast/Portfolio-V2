@@ -1,0 +1,5 @@
+body {
+    background: url("/static/images/background.png") no-repeat center ;
+    background-size: cover;
+    image-rendering: pixelated;
+}
