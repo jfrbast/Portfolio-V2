@@ -3,16 +3,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Credits</title>
+    <title>Aperçu automatique avec Microlink</title>
+
     <link rel="stylesheet" href="/static/css/common.css">
     <link rel="stylesheet" href="/static/css/header.css">
     <link rel="stylesheet" href="/static/css/credits.css">
+
+    <style>
+        .microlink_card {
+            max-width: 500px;
+            font-family: sans-serif;
+            margin: 20px auto;
+        }
+    </style>
 </head>
-{{template "header" .}}
 <body>
 
+{{template "header" .}}
+
+<h2>Aperçu du lien itch.io :</h2>
+<a href="https://kenmi-art.itch.io/cute-fantasy-rpg" class="link-preview"></a>
+
+<!-- ✅ BONNE VERSION POUR NAVIGATEUR -->
+<script src="https://unpkg.com/@microlink/vanilla/umd/microlink.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        console.log('microlink global:', window.microlink);
+
+        if (typeof window.microlink !== 'undefined') {
+            window.microlink('.link-preview', {
+                size: 'large',
+                direction: 'ltr'
+            });
+        } else {
+            console.error('Microlink SDK non chargé');
+        }
+    });
+</script>
 
 </body>
-
 </html>
 {{end}}
