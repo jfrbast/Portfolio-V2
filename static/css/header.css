@@ -1,4 +1,3 @@
-
 header {
     background: url('/static/images/header.png') no-repeat;
     background-size: 100% 100%;
@@ -12,13 +11,10 @@ header {
     padding-bottom: 2.5vw;
     box-sizing: border-box;
     image-rendering: pixelated;
-    
-
 }
-#spriteBtn, #spriteBtn2, #spriteBtn3 {
-    width: 16vw;
-    min-width: 90px;
-    max-width: 200px;
+
+
+#spriteBtn, #spriteBtn2, #spriteBtn3, #spriteBtn4 {
     height: 6vw;
     min-height: 40px;
     max-height: 70px;
@@ -28,7 +24,33 @@ header {
     cursor: pointer;
     transition: width 0.2s, height 0.2s;
 }
-#spriteImg, #spriteImg2, #spriteImg3 {
+
+
+#spriteBtn {
+    width: 14vw;
+    min-width: 100px;
+    max-width: 220px;
+}
+
+#spriteBtn2 {
+    width: 16vw;
+    min-width: 90px;
+    max-width: 200px;
+}
+
+#spriteBtn3 {
+    width: 18vw;
+    min-width: 100px;
+    max-width: 195px;
+}
+
+#spriteBtn4 {
+    width: 20vw;
+    min-width: 110px;
+    max-width: 250px;
+}
+
+#spriteImg, #spriteImg2, #spriteImg3, #spriteImg4 {
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -42,7 +64,7 @@ header {
         max-height: none;
         padding: 2vw 0;
     }
-    #spriteBtn, #spriteBtn2, #spriteBtn3 {
+    #spriteBtn, #spriteBtn2, #spriteBtn3, #spriteBtn4 {
         width: 90vw;
         max-width: 300px;
         height: 12vw;
@@ -51,8 +73,9 @@ header {
         display: block;
     }
 }
+
 @media (max-width: 400px) {
-    #spriteBtn, #spriteBtn2, #spriteBtn3 {
+    #spriteBtn, #spriteBtn2, #spriteBtn3, #spriteBtn4 {
         width: 98vw;
         max-width: 98vw;
         height: 50px;
