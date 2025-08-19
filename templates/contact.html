@@ -7,34 +7,37 @@
 
     <link rel="stylesheet" href="/static/css/common.css">
     <link rel="stylesheet" href="/static/css/header.css">
-    <link rel="stylesheet" href="/static/css/credits.css">
+    <link rel="stylesheet" href="/static/css/contact.css">
 
 </head>
 {{template "header" .}}
 <body>
 
 <form >
-    <div class="contact-container">
+
+        <div class="texttitle">
         <h1>Contact Me</h1>
         <p> Feel free to contact me !</p>
-        <div class="form-group">
+        </div>
+    <div class="contact-container">
+        <div class="NameEmail">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
 
-        </div>
-        <div class="form-group">
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
         </div>
-        <div class="form-group">
+        <div class="Message">
             <label for="message">Message:</label>
             <textarea id="message" name="message" rows="4" required></textarea>
         </div>
 
     </div>
-    <div class="form-group">
+    <div class="butttonsend">
         <button type="submit">Send</button>
+    </div>
 </form>
+
 
 </body>
 </html>

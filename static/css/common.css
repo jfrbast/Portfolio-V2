@@ -3,9 +3,9 @@
     src: url('/static/font/font.ttf') format('truetype');
 }
 *{
-    cursor: url('/static/images/cursor1.png') , pointer ;
+    cursor: url("https://img.itch.zone/aW1nLzIyNTcxMjM5LnBuZw==/original/VPSYDo.png") , pointer ;
 
 }
-a{
+:hover a , button{
     cursor: url("/static/images/hand.png"), pointer;
 }

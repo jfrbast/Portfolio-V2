@@ -1,44 +1,141 @@
 body {
-    background: url("/static/images/background.png") no-repeat center ;
+    background: url("/static/images/background.png") no-repeat center;
     background-size: cover;
     image-rendering: pixelated;
 }
-.iframely-embed{
-    width: 20%;
-    height: 20%;
-    margin-left: 5vh ;
-    margin-top: 3vh;
 
-    padding: 0;
-    display: block;
-    border: black 2px solid;
-    border-radius: 3px ;
-}
-#frame2{
-    margin-right: 5vh;
- }
-.title{
-    color: white;
-    font-family: 'PixelFontCustom', sans-serif;
-    margin-bottom: 3vw;
-
-}
-.paragraph {
-    color: white;
-    font-family: 'PixelFontCustom', sans-serif;
-    margin: 0.3vw;
-
-
-}
-.cutefantasy{
+.top-page{
     display: flex;
     flex-direction: row;
-    justify-content: left;
+    justify-content: center;
+    align-items: center;
+    padding: 2vh;
+}
+
+.Big-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3vh;
+    width: 100%;
+}
+
+.Small-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2vh;
+    gap: 2vh;
+}
+
+.Big {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3vh;
+}
+
+.Small {
+    width: 90vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
-.text-container{
+.embeds-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2vh;
+}
+
+.iframely-embed {
+    height: 400px;
+    width: 400px;
+    padding: 0;
+    display: block;
+    border-radius: 3px;
+}
+
+.text-container {
     display: flex;
     flex-direction: column;
-    margin-right: 3vh;
+    width: 1000px;
+    min-height: 400px;
+    padding: 0;
+    margin-top: 1vh;
+}
+
+.title {
+    color: white;
+    font-family: 'PixelFontCustom', sans-serif;
+    margin-bottom: 3vw;
+    padding-top: 0;
+    margin-top: 0;
+    font-size: 1.8em;
+    text-align: left;
+}
+
+.paragraph {
+    color: white;
+    font-family: 'PixelFontCustom', sans-serif;
+    margin: 0.3vw 0;
+    font-size: 1.3em;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.bottom-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2vh;
+}
+@media (max-width: 1500px) {
+    .Big {
+        display: none;
+    }
+    .Big-container{
+        display: none;
+    }
+    .top-page{
+        display: none;
+    }
+
+    .iframely-embed {
+        width: 90vw;
+        height: 200px;
+    }
+
+    .text-container {
+        width: 90vw;
+        padding: 2vh;
+        margin-top: 2vh;
+    }
+
+    .title {
+        font-size: 1.5em;
+        margin-bottom: 2vh;
+        text-align: center;
+    }
+
+    .paragraph {
+        font-size: 1.1em;
+        text-align: left;
+        margin: 1vh 0;
+    }
+}
+
+@media (min-width: 1500px) {
+    .Small {
+        display: none;
+    }
+    .Small-container{
+        display: none;
+    }
 }

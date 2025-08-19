@@ -1,0 +1,81 @@
+body {
+    background: url("/static/images/background.png") no-repeat center ;
+    background-size: cover;
+    image-rendering: pixelated;
+    font-family: 'PixelFontCustom', sans-serif;
+    color: white;
+}
+label{
+    color: white;
+    font-family: 'PixelFontCustom', sans-serif;
+    margin: 0.5vw;
+}
+input{
+    background:#e4a672 no-repeat center;
+    border: #ead4aa solid 2px;
+    outline: #3f2832 solid 1px;
+    background-size: cover;
+    image-rendering: pixelated;
+;
+    color: white;
+    font-family: 'PixelFontCustom', sans-serif;
+}
+
+textarea{
+    width: 30vw;
+    height: 20vh;
+    background:#e4a672 no-repeat center;
+    border: #ead4aa solid 2px;
+    outline: #3f2832 solid 1px;
+    background-size: cover;
+    image-rendering: pixelated;
+
+    color: white;
+    font-family: 'PixelFontCustom', sans-serif;
+}
+form{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.texttitle{
+    color: white;
+    font-family: 'PixelFontCustom', sans-serif;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-container{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 5vh;
+    gap: 5vw;
+}
+
+.NameEmail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vh;
+    margin-right: 0;
+    flex: 1;
+}
+
+.Message{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vh;
+    flex: 1;
+}
+.butttonsend{
+    justify-content: center;
+    align-items: center;
+    margin-top: 4vw;
+}
