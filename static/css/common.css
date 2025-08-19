@@ -3,8 +3,9 @@
     src: url('/static/font/font.ttf') format('truetype');
 }
 *{
-    cursor: url('/static/images/cursor1.png'),url('/static/images/cursor1.png') , pointer ;
+    cursor: url('/static/images/cursor1.png') , pointer ;
 
-
-
+}
+a{
+    cursor: url("/static/images/hand.png"), pointer;
 }

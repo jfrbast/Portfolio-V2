@@ -3,3 +3,42 @@ body {
     background-size: cover;
     image-rendering: pixelated;
 }
+.iframely-embed{
+    width: 20%;
+    height: 20%;
+    margin-left: 5vh ;
+    margin-top: 3vh;
+
+    padding: 0;
+    display: block;
+    border: black 2px solid;
+    border-radius: 3px ;
+}
+#frame2{
+    margin-right: 5vh;
+ }
+.title{
+    color: white;
+    font-family: 'PixelFontCustom', sans-serif;
+    margin-bottom: 3vw;
+
+}
+.paragraph {
+    color: white;
+    font-family: 'PixelFontCustom', sans-serif;
+    margin: 0.3vw;
+
+
+}
+.cutefantasy{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+
+.text-container{
+    display: flex;
+    flex-direction: column;
+    margin-right: 3vh;
+}

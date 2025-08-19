@@ -3,6 +3,7 @@ package main
 import (
 	"Portfolio/pages"
 	"Portfolio/templates"
+	"Portfolio/utils"
 	"fmt"
 	"log"
 	"net/http"
@@ -15,7 +16,8 @@ func main() {
 	http.HandleFunc("/", pages.HomePage)
 	http.HandleFunc("/about", pages.AboutPage)
 	http.HandleFunc("/credits", pages.CreditsPage)
-
+	http.HandleFunc("/contact", pages.ContactPage)
+	utils.Init()
 	fmt.Println("Serveur démarré sur http://localhost:8080")
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }

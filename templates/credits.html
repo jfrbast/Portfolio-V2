@@ -3,45 +3,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Aperçu automatique avec Microlink</title>
+    <title>Crédits </title>
 
     <link rel="stylesheet" href="/static/css/common.css">
     <link rel="stylesheet" href="/static/css/header.css">
     <link rel="stylesheet" href="/static/css/credits.css">
 
-    <style>
-        .microlink_card {
-            max-width: 500px;
-            font-family: sans-serif;
-            margin: 20px auto;
-        }
-    </style>
 </head>
-<body>
-
 {{template "header" .}}
+<body>
+<div class="cutefantasy">
+    <div class="iframely-embed"><div class="iframely-responsive" >
+    <a href="https://kenmi-art.itch.io/cute-fantasy-rpg" data-iframely-url="//iframely.net/5R0uvhAZ?theme=dark"></a></div>
+</div><script async src="//iframely.net/embed.js"></script>
 
-<h2>Aperçu du lien itch.io :</h2>
-<a href="https://kenmi-art.itch.io/cute-fantasy-rpg" class="link-preview"></a>
+<div class="iframely-embed" id="frame2"><div class="iframely-responsive" >
+    <a href="https://kenmi-art.itch.io/cute-fantasy-ui" data-iframely-url="//iframely.net/s5yZUl0j?theme=dark"></a></div>
+</div><script async src="//iframely.net/embed.js"></script>
 
-<!-- ✅ BONNE VERSION POUR NAVIGATEUR -->
-<script src="https://unpkg.com/@microlink/vanilla/umd/microlink.min.js"></script>
+<div class="text-container">
+        <h3 class="title">All assets used in this portfolio are from the assets pack Cute Fantasy.</h3>
+    <p class="paragraph">License / Premium Version</p>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        console.log('microlink global:', window.microlink);
+    <p class="paragraph">- You can use these assets in any commercial or non-commercial projects.</p>
 
-        if (typeof window.microlink !== 'undefined') {
-            window.microlink('.link-preview', {
-                size: 'large',
-                direction: 'ltr'
-            });
-        } else {
-            console.error('Microlink SDK non chargé');
-        }
-    });
-</script>
+    <p class="paragraph">- You can modify the assets.</p>
 
+    <p class="paragraph">- You can not redistribute or resale, even if modified</p>
+
+    </div>
+
+</div>
+
+<h3 class="title">
+    Used languages :
+</h3>
+<div class="languages">
+
+</div>
 </body>
+
+
 </html>
 {{end}}
