@@ -7,7 +7,6 @@ import (
 	"os"
 )
 
-
 func SendMail(From string, Name string, Message string) {
 
 	To := []string{"bastienjouffre@gmail.com"}
@@ -27,5 +26,5 @@ func SendMail(From string, Name string, Message string) {
 		log.Fatal(err)
 	}
 	fmt.Println("ok")
-	log.Println("✅ Email envoyé avec succès !")
+
 }

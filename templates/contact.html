@@ -13,12 +13,12 @@
 {{template "header" .}}
 <body>
 
-<form >
+<form id="contactForm">
 
-        <div class="texttitle">
+    <div class="texttitle">
         <h1>Contact Me</h1>
         <p> Feel free to contact me !</p>
-        </div>
+    </div>
     <div class="contact-container">
         <div class="NameEmail">
             <label for="name">Name:</label>
@@ -33,12 +33,39 @@
         </div>
 
     </div>
-    <div class="butttonsend">
-        <button type="submit">Send</button>
-    </div>
+    </button>
+    <button id="spriteBtn5" type="submit">
+        <img id="spriteImg5" src="/static/sprites/send_button/send1.png" alt="sprite" >
+
+    </button>
 </form>
 
 
 </body>
 </html>
+<script>
+    const frameInterval = 70;
+    const frames = [
+        "/static/sprites/send_button/send1.png",
+        "/static/sprites/send_button/send2.png",
+        "/static/sprites/send_button/send3.png"
+    ];
+
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        let currentFrame = 0;
+        const interval = setInterval(() => {
+            document.getElementById("spriteImg5").src = frames[currentFrame];
+            currentFrame++;
+
+            if (currentFrame >= frames.length) {
+                clearInterval(interval);
+                setTimeout(() => {
+                    e.target.submit();
+                }, 200);
+            }
+        }, frameInterval);
+    });
+</script>
 {{end}}
