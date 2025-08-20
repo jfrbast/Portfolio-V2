@@ -55,15 +55,62 @@
         <p class="paragraph">- You can not redistribute or resale, even if modified</p>
     </div>
 </div>
-<div class="bottom-page">
-<h3 class="title">Languages used :</h3>
 
-<p class="paragraph">- Golang.</p>
-<p class="paragraph">- HTML.</p>
-<p class="paragraph">- css.</p>
-<p class="paragraph">- Javascript.</p>
+<div class="bottom-page">
+    <h3 class="title">Languages used :</h3>
+    <div class="carousel-container">
+        <div class="carousel-track">
+            <div class="language-card" data-name="Go">
+                <img src="/static/images/go-logo.png" alt="Go">
+                <span>Golang</span>
+            </div>
+            <div class="language-card" data-name="HTML">
+                <img src="/static/images/html-logo.png" alt="HTML">
+                <span>HTML</span>
+            </div>
+            <div class="language-card" data-name="CSS">
+                <img src="/static/images/css-logo.png" alt="CSS">
+                <span>CSS</span>
+            </div>
+            <div class="language-card"  data-name="JavaScript" >
+                <img id="javaScriptlogo" src="/static/images/js-logo.png" alt="JavaScript">
+                <span>JavaScript</span>
+            </div>
+
+        </div>
+    </div>
 </div>
 
+<script>
+    let currentIndex = 1;
+    const cards = document.querySelectorAll('.language-card');
+    const totalCards = cards.length;
+
+    function updateCarousel() {
+        cards.forEach((card, index) => {
+            card.classList.remove('left', 'center', 'right');
+
+            const leftIndex = (currentIndex - 1 + totalCards) % totalCards;
+            const rightIndex = (currentIndex + 1) % totalCards;
+
+            if (index === leftIndex) {
+                card.classList.add('left');
+            } else if (index === currentIndex) {
+                card.classList.add('center');
+            } else if (index === rightIndex) {
+                card.classList.add('right');
+            }
+        });
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalCards;
+        updateCarousel();
+    }
+
+    updateCarousel();
+    setInterval(nextSlide, 3000);
+</script>
 
 </body>
 </html>
