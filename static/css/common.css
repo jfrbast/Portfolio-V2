@@ -3,7 +3,7 @@
     src: url('/static/font/font.ttf') format('truetype');
 }
 *{
-    cursor: url("https://img.itch.zone/aW1nLzIyNTcxMjM5LnBuZw==/original/VPSYDo.png") , pointer ;
+    cursor: url("/static/images/cursor.png") , pointer ;
 
 }
 :hover a , button{

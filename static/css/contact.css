@@ -10,12 +10,19 @@ label{
     font-family: 'PixelFontCustom', sans-serif;
     margin: 0.5vw;
 }
+#Name-label{
+    padding-top: 20px;
+}
+#Email-label{
+    padding-top: 20px;
+}
 input{
     background:#e4a672 no-repeat center;
     border: #ead4aa solid 2px;
     outline: #3f2832 solid 1px;
     background-size: cover;
     image-rendering: pixelated;
+    height: 40px;
 ;
     color: white;
     font-family: 'PixelFontCustom', sans-serif;

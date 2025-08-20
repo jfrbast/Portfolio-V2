@@ -8,7 +8,6 @@ h1 {
     color: black;
     font-family: 'PixelFontCustom', sans-serif;
     margin: 0;
-    margin-top: 4vh;
 
 }
 p{
@@ -16,12 +15,7 @@ p{
     font-family: 'PixelFontCustom', sans-serif;
     margin: 0;
 }
-.min-text{
-    font-size: 0.6em;
-    color: black;
-    font-family: 'PixelFontCustom', sans-serif;
-    margin: 0;
-}
+
 
 
 .bubul-container {
@@ -52,11 +46,45 @@ p{
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-
     pointer-events: none;
 }
+#title-2{
+    margin-top: 3vh;
+}
+#title-3{
+    margin-top: 10vh;
+}
+.bubul-text > h1 {
+    font-size: 3em;
+    margin-bottom: 1em;
+    margin-top: 3vh;
+}
 
+.bubul-text > p {
+    font-size: 1em;
+    margin-bottom: 1.5em;
+}
+.bubul-text > .min-text{
+    font-size: 0.6em;
+    color: black;
+    font-family: 'PixelFontCustom', sans-serif;
+    margin-bottom: 2rem;
+}
 
+.bubul-text2 > h1 {
+    font-size: 3em;
+    margin-bottom: 1em;
+}
+.bubul-text2> p {
+    font-size: 1em;
+    margin-bottom: 1.5em;
+}
+.bubul-text2 > .min-text{
+    font-size: 0.6em;
+    color: black;
+    font-family: 'PixelFontCustom', sans-serif;
+    margin-bottom: 2rem;
+}
 .bubul-container2 {
     position: relative;
     margin: 5vh 0 5vh auto;
@@ -94,7 +122,7 @@ p{
     height: auto;
     image-rendering: pixelated;
     margin-top: 5vh;
-    margin-right: 7vw;
+    margin-right: 6vw;
     display: flex;
 }
 
@@ -136,21 +164,28 @@ p{
 @media (min-width: 1178px) {
 
     .bubul-text{
-        width:60vw;
+        width:35vw;
     }
     .bubul-text2{
-        width: 60vw;
+        width: 35vw;
     }
 }
 @media (max-width: 1178px) {
 
     .bubul-text{
-        width: 70vw;
+        width: 63vw;
     }
     .bubul-text2{
-        width: 70vw;
+        width: 63vw;
+    }
+    #title-1{
+        margin-top: 6vh;
+    }
+    #title-3{
+        margin-top: 6vh;
     }
 }
+
 @media (min-width: 1370px) {
 
     .bubul-text{
@@ -190,10 +225,10 @@ p{
 @media (min-width: 2745px) {
 
     .bubul-text{
-        width:25vw;
+        width:30vw;
     }
     .bubul-text2{
-        width: 25vw;
+        width: 30vw;
     }
 }
 
