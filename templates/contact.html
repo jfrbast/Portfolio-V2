@@ -3,22 +3,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Contact </title>
-
+    <title>Contact</title>
+    <link rel="icon" type="image/png" href="/static/favicons/logo-Portfolio.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/static/favicons/logo-Portfolio.png" />
+    <link rel="shortcut icon" href="/static/favicons/logo-Portfolio.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/favicons/logo-Portfolio.png" />
+    <link rel="manifest" href="/static/favicons/logo-Portfolio.png" />
     <link rel="stylesheet" href="/static/css/common.css">
     <link rel="stylesheet" href="/static/css/header.css">
     <link rel="stylesheet" href="/static/css/contact.css">
-
 </head>
 {{template "header" .}}
 <body>
 
 <form id="contactForm">
-
     <div class="texttitle">
         <h1>Contact Me</h1>
-        <p> Feel free to contact me !</p>
+        <p>Feel free to contact me!</p>
     </div>
+    {{if .Message}}
+    <p class="{{.MessageType}}">
+        {{.Message}}
+    </p>
+    {{end}}
     <div class="contact-container">
         <div class="NameEmail">
             <label for="name" id="Name-label">Name:</label>
@@ -31,19 +38,28 @@
             <label for="message">Message:</label>
             <textarea id="message" name="message" rows="4" required></textarea>
         </div>
-
     </div>
-    </button>
     <button id="spriteBtn5" type="submit">
         <img id="spriteImg5" src="/static/sprites/send_button/send1.png" alt="sprite" >
-
     </button>
 </form>
-
-
+<div class ="bottom">
+    <hr><p class="bottom-p">or</p><hr>
+</div>
+<div class="contact-links">
+    <p>bastienjouffre@gmail.com / +33 07 82 13 56 86</p>
+</div>
 </body>
 </html>
 <script>
+    window.addEventListener('DOMContentLoaded', function() {
+        const msg = document.querySelector('.success, .error');
+        if (msg) {
+            setTimeout(() => {
+                msg.style.display = 'none';
+            }, 3000);
+        }
+    });
     const frameInterval = 70;
     const frames = [
         "/static/sprites/send_button/send1.png",

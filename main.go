@@ -17,6 +17,7 @@ func main() {
 	http.HandleFunc("/about", pages.AboutPage)
 	http.HandleFunc("/credits", pages.CreditsPage)
 	http.HandleFunc("/contact", pages.ContactPage)
+	http.HandleFunc("/projects", pages.ProjectsPage)
 	utils.Init()
 	fmt.Println("Serveur démarré sur http://localhost:8080")
 	log.Fatal(http.ListenAndServe(":8080", nil))

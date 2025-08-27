@@ -29,6 +29,9 @@ body {
     padding: 2vh;
     gap: 2vh;
 }
+.Big, .Small :hover{
+    cursor: url("/static/images/hand.png"), pointer !important;
+}
 
 .Big {
     display: flex;
@@ -205,6 +208,7 @@ body {
     height: 80px;
     object-fit: contain;
     border-radius: 8px;
+    image-rendering: pixelated;
 }
 
 .language-card span {

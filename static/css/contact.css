@@ -17,26 +17,25 @@ label{
     padding-top: 20px;
 }
 input{
-    background:#e4a672 no-repeat center;
+    background:#e4a672;
     border: #ead4aa solid 2px;
     outline: #3f2832 solid 1px;
     background-size: cover;
     image-rendering: pixelated;
-    height: 40px;
-;
+    height: 50px;
+    width: 300px;
     color: white;
     font-family: 'PixelFontCustom', sans-serif;
 }
 
 textarea{
-    width: 30vw;
+    width: 40vw;
     height: 20vh;
-    background:#e4a672 no-repeat center;
+    background:#e4a672;
     border: #ead4aa solid 2px;
     outline: #3f2832 solid 1px;
     background-size: cover;
     image-rendering: pixelated;
-
     color: white;
     font-family: 'PixelFontCustom', sans-serif;
 }
@@ -59,7 +58,7 @@ form{
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
-    margin-top: 5vh;
+    margin-top: 3vh;
     gap: 5vw;
 }
 
@@ -68,7 +67,7 @@ form{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 2vh;
+    margin-top: 1vh;
     margin-right: 0;
     flex: 1;
 }
@@ -78,7 +77,7 @@ form{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 2vh;
+    margin-top: 1vh;
     flex: 1;
 }
 .butttonsend{
@@ -93,13 +92,60 @@ form{
     image-rendering: pixelated;
 }
 #spriteBtn5{
-
     height: 6vw;
     min-height: 40px;
     max-height: 70px;
     background: none;
     border: none;
-    margin: 50px ;
+    margin: 30px;
     cursor: pointer;
     transition: width 0.2s, height 0.2s;
+}
+.success {
+    color: white;
+    background: #e4a672;
+    border: #ead4aa solid 2px;
+    outline: #3f2832 solid 1px;
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.error {
+    color: white;
+    background: #3f2832;
+    border: #ead4aa solid 2px;
+    outline: #e4a672 solid 1px;
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+.bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom-p{
+    color: white ;
+    font-size: 1.5vw;
+    font-family: 'PixelFontCustom', sans-serif;
+    text-align: center;
+    margin: 0 1vw;
+}
+hr{
+    background:#ead4aa ;
+    width: 30%;
+    border: 0;
+    height: 4px;
+    margin: 20px 0;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1vh;
 }

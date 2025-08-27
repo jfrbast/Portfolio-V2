@@ -3,7 +3,6 @@ package pages
 import (
 	"Portfolio/mailer"
 	"Portfolio/templates"
-	"fmt"
 	"log"
 	"net/http"
 )
@@ -30,25 +29,41 @@ func CreditsPage(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Erreur serveur", http.StatusInternalServerError)
 	}
 }
-
-func ContactPage(w http.ResponseWriter, r *http.Request) {
-
-	Name := r.FormValue("name")
-	Email := r.FormValue("email")
-	Message := r.FormValue("message")
-	fmt.Println(Name, Email, Message)
-
-	if Name != "" && Email != "" && Message != "" {
-		mailer.SendMail(Email, Name, Message)
-		log.Println("✅ Email envoyé avec succès !")
-		http.Redirect(w, r, "/", http.StatusSeeOther)
-		return
-	}
-
-	err := templates.Temp.ExecuteTemplate(w, "contact", nil)
+func ProjectsPage(w http.ResponseWriter, r *http.Request) {
+	err := templates.Temp.ExecuteTemplate(w, "projects", nil)
 	if err != nil {
 		log.Println("Erreur template accueil:", err)
 		http.Error(w, "Erreur serveur", http.StatusInternalServerError)
+	}
+}
 
+func ContactPage(w http.ResponseWriter, r *http.Request) {
+	Name := r.FormValue("name")
+	Email := r.FormValue("email")
+	Message := r.FormValue("message")
+
+	var msg, msgType string
+
+	success := mailer.SendMail(Email, Name, Message)
+	if success == "Missing" {
+		msg = "Please fill in all fields"
+		msgType = "error"
+	}
+	if success == "Sent" {
+		msg = "Message sent successfully"
+		msgType = "success"
+	}
+	if success == "Error" {
+		msg = "Error sending message"
+		msgType = "error"
+	}
+
+	err := templates.Temp.ExecuteTemplate(w, "contact", map[string]interface{}{
+		"Message":     msg,
+		"MessageType": msgType,
+	})
+	if err != nil {
+		log.Println("Erreur template contact:", err)
+		http.Error(w, "Erreur serveur", http.StatusInternalServerError)
 	}
 }

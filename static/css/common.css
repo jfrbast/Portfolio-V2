@@ -2,10 +2,13 @@
     font-family: 'PixelFontCustom';
     src: url('/static/font/font.ttf') format('truetype');
 }
-*{
-    cursor: url("/static/images/cursor.png") , pointer ;
-
-}
 :hover a , button{
-    cursor: url("/static/images/hand.png"), pointer;
+    cursor: url("/static/images/hand.png") , pointer !important;
+}
+
+
+*{
+    cursor: url("/static/images/cursor.png") , auto ;
+    scrollbar-width: none;
+
 }

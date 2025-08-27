@@ -2,21 +2,60 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home Page </title>
+    <title>Portfolio - Bastien Jouffre</title>
+    <link rel="icon" type="image/png" href="/static/favicons/logo-Portfolio.png" sizes="96x96" />
     <link rel="stylesheet" href="/static/css/common.css">
     <link rel="stylesheet" href="/static/css/header.css">
     <link rel="stylesheet" href="/static/css/home.css">
 </head>
-
 {{template "header" .}}
-    <body>
+<body>
+    <div class="hero-container">
+        <div class="hero-content">
+            <img src="/static/images/logo-Portfolio.png" alt="Portfolio Logo" class="hero-logo">
+            <h1 class="hero-title">Interactive Portfolio</h1>
+            <p class="hero-subtitle"></p>
 
-    <h1>
-        BIENVENUE
-    </h1>
-    </body>
+            <div class="simple-description">
+                <p>Explore my projects through a point-and-click game where each house reveals a different project.</p>
+            </div>
+
+            <div class="dev-notice">
+                <p>🚧 The game is currently under development - Coming soon! 🚧</p>
+                <p class="dev-subtext">In the meantime, you can check out my projects directly</p>
+            </div>
+
+            <button id="playBtn" class="play-button" disabled>
+                <img id="playImg" src="/static/sprites/play_button/green_play1.png" alt="Play Button">
+            </button>
 
 
+        </div>
+    </div>
+
+    <script>
+        const frameInterval = 100;
+        const frames = [
+            "/static/sprites/play_button/green_play1.png",
+            "/static/sprites/play_button/green_play2.png",
+            "/static/sprites/play_button/green_play3.png"
+        ];
+
+        document.getElementById("playBtn").addEventListener("click", function() {
+            let currentFrame = 0;
+            const interval = setInterval(() => {
+                document.getElementById("playImg").src = frames[currentFrame];
+                currentFrame++;
+
+                if (currentFrame >= frames.length) {
+                    clearInterval(interval);
+                    setTimeout(() => {
+                        window.location.href = "/game";
+                    }, 200);
+                }
+            }, frameInterval);
+        });
+    </script>
+</body>
 </html>
 {{end}}
-

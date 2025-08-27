@@ -1,0 +1,144 @@
+{{define "projects"}}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Projects</title>
+    <link rel="icon" type="image/png" href="/static/favicons/logo-Portfolio.png" sizes="96x96" />
+    <link rel="stylesheet" href="/static/css/common.css">
+    <link rel="stylesheet" href="/static/css/header.css">
+    <link rel="stylesheet" href="/static/css/projects.css">
+</head>
+{{template "header" .}}
+<body>
+
+<div class="squares-container">
+    <div id="openModal1" class="square">
+        <img src="/static/images/titre-CN.png" alt="titre-CN.png" class="square-img titre-img">
+        <img src="/static/images/CN.png" alt="CN.png" class="square-img">
+        <div class="hover-animation"></div>
+    </div>
+    <div id="openModal2" class="square">
+        <img src="/static/images/titre-gendskills.png" alt="titre-gendskills.png" class="square-img titre-img">
+        <img src="/static/images/Gendskills.png" alt="Gendskills.png" class="square-img">
+        <div class="hover-animation"></div>
+    </div>
+    <div id="openModal3" class="square">
+        <img src="/static/images/titre-portfolio.png" alt="titre-portfolio.png" class="square-img titre-img">
+        <img src="/static/images/logo-Portfolio.png" alt="logo-Portfolio.png" class="square-img ">
+        <div class="hover-animation"></div>
+    </div>
+</div>
+
+<div id="projectModal1" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-header">
+            <img src="/static/images/titre-CN.png" alt="Creative Network Title" class="modal-title-img">
+            <img src="/static/images/CN.png" alt="Creative Network" class="modal-project-img">
+        </div>
+        <div class="modal-body">
+            <div class="project-info">
+                <div class="project-date">
+                    <span class="info-label">Date:</span>
+                    <span class="info-value">2025</span>
+                </div>
+                <div class="project-languages">
+                    <span class="info-label">Languages:</span>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">Fabric (Minecraft mods)</span>
+                    </div>
+                </div>
+                <div class="project-description">
+                    <span class="info-label">What:</span>
+                    <p class="description-text">I was in the development part of this project which is a mod for the game Minecraft.</p>
+                    <p class="description-text">https://linktr.ee/createnuclear</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="projectModal2" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-header">
+            <img src="/static/images/titre-gendskills.png" alt="Gendskills Title" class="modal-title-img">
+            <img src="/static/images/Gendskills.png" alt="Gendskills" class="modal-project-img">
+        </div>
+        <div class="modal-body">
+            <div class="project-info">
+                <div class="project-date">
+                    <span class="info-label">Date:</span>
+                    <span class="info-value">July 2025</span>
+                </div>
+                <div class="project-languages">
+                    <span class="info-label">Languages:</span>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Vue.js</span>
+                    </div>
+                </div>
+                <div class="project-description">
+                    <span class="info-label">What:</span>
+                    <p class="description-text">I was in the Frontend part of this project which aimed to create a website for the administrative section of the gendarmerie.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="projectModal3" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-header">
+            <img src="/static/images/titre-portfolio.png" alt="Portfolio Title" class="modal-title-img">
+            <img src="/static/images/logo-Portfolio.png" alt="Portfolio" class="modal-project-img">
+        </div>
+        <div class="modal-body">
+            <div class="project-info">
+                <div class="project-date">
+                    <span class="info-label">Date:</span>
+                    <span class="info-value">August 2025</span>
+                </div>
+                <div class="project-languages">
+                    <span class="info-label">Languages:</span>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Go</span>
+                        <span class="tech-tag">HTML/CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Game Design</span>
+                    </div>
+                </div>
+                <div class="project-description">
+                    <span class="info-label">What:</span>
+                    <p class="description-text">Interactive portfolio with point-and-click game. I developed the web server in Go, designed the sprites and pixel art animations, implemented the point-and-click navigation system, and integrated a contact form system with email sending.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('openModal1').onclick = function() {
+        document.getElementById('projectModal1').style.display = 'flex';
+    };
+    document.getElementById('openModal2').onclick = function() {
+        document.getElementById('projectModal2').style.display = 'flex';
+    };
+    document.getElementById('openModal3').onclick = function() {
+        document.getElementById('projectModal3').style.display = 'flex';
+    };
+    document.querySelectorAll('.modal').forEach(function(modal) {
+        modal.querySelector('.close').onclick = function() {
+            modal.style.display = 'none';
+        };
+        window.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    });
+</script>
+</body>
+</html>
+{{end}}
