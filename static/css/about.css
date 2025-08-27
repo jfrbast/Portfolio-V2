@@ -1,3 +1,4 @@
+
 body {
     background: url("/static/images/background.png") no-repeat center ;
     background-size: cover ;
@@ -5,29 +6,33 @@ body {
 }
 
 h1 {
-    color: white;
+    color: black;
     font-family: 'PixelFontCustom', sans-serif;
     margin: 0;
-    text-shadow: 2px 2px 4px #3f2832;
+
+}
+p{
+    color: black;
+    font-family: 'PixelFontCustom', sans-serif;
+    margin: 0;
 }
 
-p{
-    color: #ead4aa;
-    font-family: 'PixelFontCustom', sans-serif;
-    margin: 0;
-}
+
 
 .bubul-container {
     position: relative;
-    margin-top: 3vh;
+    margin-top: 5vh;
+
+
 }
 
 .bubul {
     display: block;
-    width: 1200px;
+    width: 900px;
     height: auto;
     margin: 0;
     image-rendering: pixelated;
+
 }
 
 .bubul-text {
@@ -35,7 +40,7 @@ p{
     bottom: 70px;
     right: 100px;
     left: 100px;
-    width: 55vw;
+    width: 45vw;
     height: 100%;
     color: white;
     display: flex;
@@ -44,66 +49,46 @@ p{
     align-items: flex-start;
     pointer-events: none;
 }
-
 #title-2{
     margin-top: 3vh;
 }
 #title-3{
     margin-top: 10vh;
 }
-
 .bubul-text > h1 {
     font-size: 3em;
     margin-bottom: 1em;
     margin-top: 3vh;
-    color: white;
-    text-shadow: 2px 2px 4px #3f2832;
 }
 
 .bubul-text > p {
     font-size: 1em;
     margin-bottom: 1.5em;
-    color: #ead4aa;
 }
-
 .bubul-text > .min-text{
     font-size: 0.6em;
-    color: #e4a672;
+    color: black;
     font-family: 'PixelFontCustom', sans-serif;
     margin-bottom: 2rem;
-    background: rgba(63, 40, 50, 0.7);
-    padding: 8px;
-    border-radius: 5px;
-    border: 1px solid #ead4aa;
 }
 
 .bubul-text2 > h1 {
     font-size: 3em;
     margin-bottom: 1em;
-    color: white;
-    text-shadow: 2px 2px 4px #3f2832;
 }
-
 .bubul-text2> p {
     font-size: 1em;
     margin-bottom: 1.5em;
-    color: #ead4aa;
 }
-
 .bubul-text2 > .min-text{
     font-size: 0.6em;
-    color: #e4a672;
+    color: black;
     font-family: 'PixelFontCustom', sans-serif;
     margin-bottom: 2rem;
-    background: rgba(63, 40, 50, 0.7);
-    padding: 8px;
-    border-radius: 5px;
-    border: 1px solid #ead4aa;
 }
-
 .bubul-container2 {
     position: relative;
-    margin: 3vh 0 3vh auto;
+    margin: 5vh 0 5vh auto;
     width: fit-content;
 }
 
@@ -111,7 +96,7 @@ p{
     position: absolute;
     bottom: 70px;
     left:70px;
-    width: 55vw;
+    width: 45vw;
     height: 100%;
     color: white;
     display: flex;
@@ -120,29 +105,28 @@ p{
     align-items: flex-start;
     pointer-events: none;
 }
-
 .bubul3text{
-    font-size: 0.9em;
-    color: #ead4aa;
-}
 
+    font-size: 0.9em;
+
+}
 #sprite-container > img {
-    width: 600px;
+    width: 500px;
     height: auto;
     image-rendering: pixelated;
-    margin-top: 2vh;
+    margin-top: 4vh;
     margin-left: 6vw;
     display: flex;
 }
-
 #cow-container > img {
-    width: 600px;
+    width: 500px;
     height: auto;
     image-rendering: pixelated;
-    margin-top: 3vh;
+    margin-top: 5vh;
     margin-right: 6vw;
     display: flex;
 }
+
 
 .spritebubul{
     display: flex;
@@ -152,13 +136,13 @@ p{
 
 #image-tree{
     margin-right: 10vw;
-}
 
+}
 .tree-image{
-    width: 400px;
+    width: 300px;
     height: auto;
     image-rendering: pixelated;
-    margin-top: 2vh;
+    margin-top: 4vh;
     margin-left: 6vw;
 }
 
